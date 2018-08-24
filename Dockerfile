@@ -1,4 +1,4 @@
-FROM kawaii/spigot-builder:1.12.2 as BUILD
+FROM kawaii/spigot-builder:1.13 as BUILD
 
 FROM openjdk:9-jre-slim
 MAINTAINER Kane Valentine <kane@cute.im>
@@ -10,4 +10,4 @@ COPY docker-entrypoint.sh /usr/local/bin/
 
 EXPOSE 25565
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["java", "-Xmx1024M", "-Xms1024M", "-jar", "spigot-1.12.2.jar", "nogui"]
+CMD ["java", "-Xmx1024M", "-Xms1024M", "-jar", "spigot-1.13.jar", "nogui"]
