@@ -4,7 +4,7 @@ FROM openjdk:9-jre-slim
 MAINTAINER Kane Valentine <kane@cute.im>
 
 WORKDIR /opt/spigot/
-COPY --from=BUILD /src/build/spigot/spigot-1.12.2.jar .
+COPY --from=BUILD /src/build/spigot/spigot-1.13.jar .
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
