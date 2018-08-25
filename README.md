@@ -18,7 +18,7 @@ services:
   spigot:
     environment:
       SPIGOT_AGREE_EULA: 'true'
-      SPIGOT_LEVEL_NAME: dockercraft!
+      SPIGOT_LEVEL_NAME: dockercraft
     image: kawaii/spigot-server:latest
     ports:
     - 0.0.0.0:25565:25565/tcp
