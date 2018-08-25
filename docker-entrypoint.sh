@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo 'eula=true' > /opt/spigot/eula.txt
+if [ "$SPIGOT_AGREE_EULA" = true ] ; then
+    echo 'eula=true' > eula.txt
+fi
 
-cat <<EOT > /opt/spigot/server.properties
-#Minecraft server properties
+cat <<EOT > server.properties
+# Minecraft server properties
 view-distance=${SPIGOT_VIEW_DISTANCE:-10}
 max-build-height=${SPIGOT_MAX_BUILD_HEIGHT:-256}
 server-ip=${SPIGOT_SERVER_IP:-}
@@ -41,5 +43,10 @@ online-mode=${SPIGOT_ONLINE_MODE:-true}
 allow-flight=${SPIGOT_ALLOW_FLIGHT:-false}
 max-world-size=${SPIGOT_MAX_WORLD_SIZE:-29999984}
 EOT
+
+if [ "$SPIGOT_ENABLE_RCON" = true ] ; then
+    echo 'rcon.port='${SPIGOT_RCON_PORT:-25575} >> server.properties
+    echo 'rcon.password='${SPIGOT_RCON_PASSWORD:-password} >> server.properties
+fi
 
 exec "$@"
