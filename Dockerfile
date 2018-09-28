@@ -1,6 +1,6 @@
 FROM kawaii/spigot-builder:1.13.1 as BUILD
 
-FROM openjdk:10-jre-slim
+FROM openjdk:11-jre-slim
 MAINTAINER Kane Valentine <kane@cute.im>
 
 WORKDIR /opt/spigot/
