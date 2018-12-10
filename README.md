@@ -8,7 +8,7 @@ The Spigot `server.properties` file is generated dynamically by the [entrypoint]
 ### ... via [`docker container run`](https://docs.docker.com/engine/reference/commandline/container_run/)
 
 ```
-docker container run -p 25565:25565 -e SPIGOT_AGREE_EULA=true kawaii/spigot-server:latest
+docker container run -p 25565:25565 -e SPIGOT_AGREE_EULA=true kawaii/spigot-server:1.13.2
 ```
 
 ### ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
