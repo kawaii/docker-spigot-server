@@ -44,7 +44,7 @@ allow-flight=${SPIGOT_ALLOW_FLIGHT:-false}
 max-world-size=${SPIGOT_MAX_WORLD_SIZE:-29999984}
 EOT
 
-if [ "$SPIGOT_ENABLE_RCON" = true ] ; then
+if [ ${SPIGOT_ENABLE_RCON:-false} = true ] ; then
     echo 'rcon.port='${SPIGOT_RCON_PORT:-25575} >> server.properties
     echo 'rcon.password='${SPIGOT_RCON_PASSWORD:-password} >> server.properties
 fi
