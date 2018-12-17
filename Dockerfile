@@ -1,7 +1,7 @@
 FROM kawaii/spigot-builder:1.13.2 as BUILD
 
 FROM openjdk:11-jre-slim
-MAINTAINER Kane Valentine <kane@cute.im>
+LABEL maintainer="Kane Valentine <kane@cute.im>"
 
 WORKDIR /opt/spigot/
 
