@@ -24,3 +24,11 @@ services:
     - 0.0.0.0:25565:25565/tcp
 version: '3.7'
 ```
+
+## Persisting Data
+
+_To be completed soon™._
+
+## Installing Plugins
+
+_To be completed soon™._
