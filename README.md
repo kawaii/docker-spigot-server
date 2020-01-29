@@ -25,6 +25,17 @@ services:
 version: '3.7'
 ```
 
+### ... via [`docker build`](https://docs.docker.com/engine/reference/commandline/build/)
+
+```
+docker build \                         
+  --build-arg BUILD_AUTHORS="Kane 'kawaii' Valentine <kane@cute.im>" \
+  --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
+  --build-arg SPIGOT_VERSION=1.15.2 \
+  --tag kawaii/spigot-server:1.15.2 \
+$PWD
+```
+
 ## Persisting Data
 
 _To be completed soon™._
