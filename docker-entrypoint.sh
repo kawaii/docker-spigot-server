@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 set -euo pipefail
 
 if [ "$SPIGOT_AGREE_EULA" = true ] ; then
