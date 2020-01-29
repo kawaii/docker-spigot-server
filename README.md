@@ -1,5 +1,5 @@
 # docker-spigot-server
-Dockerfile using my Spigot builder image to spin up a server instance.
+Dockerfile using my [Spigot builder image](https://github.com/kawaii/docker-spigot-builder) to spin up a server instance.
 
 ## Usage
 
